@@ -1,0 +1,244 @@
+/* This is the CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* This is the Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;                /*this is the relative unit */
+  color: #2e2e2e;
+  background-color: #ececdd; 
+  line-height: 1.6;
+  letter-spacing: 0.03125rem;
+  padding: 1.25rem;               /*this is the relative unit */
+}
+
+/* This is the Headings section */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #556b2f;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #6b8e23;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #3e4f1c;
+  margin-bottom: 0.625rem;
+}
+
+/* This is for the Paragraphs */
+p {
+  font-size: 1rem;
+  font-weight: 400;  
+  margin-bottom: 0.9375rem;
+}
+
+/* This is for the Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #6b8e23; 
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #3e4f1c; 
+}
+
+/*This is for the Sections */
+section {
+  margin-bottom: 30px;
+}
+
+/* This will affect the Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #d4e4c4; 
+  color: #2e2e2e;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #6b8e23;
+  color: rgb(216, 216, 207);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #556b2f;
+}
+
+.container { /*This is the Layout Container */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*This is for the Navigation Bar */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 15px;
+  background-color: #d4e4c4; 
+}
+
+/* This is for the Main Content Area */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  padding: 5%;
+}
+
+aside {
+  flex: 1;
+  background-color: #ebebda;
+  padding: 5%;
+}
+
+/* This is for the Primary Content */
+article {
+  flex: 3;
+  padding: 5%;
+}
+
+/* This is the Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #6d9125;
+  color: rgb(244, 247, 242);
+}
+/* This is the Interactive Link Styling */
+nav a:focus {
+  outline: 2px solid #e6e8e0;
+}
+
+nav a:active {
+  background-color: #4b5e1f;
+  color: #f7ffe8;
+}
+
+/*This is the  Interactive Button Styling */
+a[href*="products"] {
+  display: inline-block;
+  background-color: #739926;
+  color: rgb(252, 255, 246);
+  padding: 10px 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(11, 11, 11, 0.2);
+}
+
+a[href*="products"]:hover {
+  background-color: #5b7232;
+  box-shadow: 0 4px 8px rgba(17, 17, 17, 0.3);
+}
+
+/*Below is the Responsive Design Breakpoints */
+
+
+/* Tablet View */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  main {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p, ul, td {
+    font-size: 0.9rem;
+  }
+}
+
+/* Product Images */
+section img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
